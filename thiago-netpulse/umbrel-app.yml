@@ -4,8 +4,7 @@ name: NetPulse
 tagline: Acompanhe a velocidade real da sua internet ao longo do tempo
 icon: https://github.com/thsf1987/thiago-umbrel-store/raw/master/thiago-netpulse/logo.png
 category: Networking
-version: "1.0.0"
-port: 4119
+version: "1.0.1"
 
 description: >-
   Rastreador self-hosted de velocidade de internet. Agenda testes Ookla
@@ -20,7 +19,7 @@ submitter: Thiago
 submission: https://github.com/MrHDOLEK/NetPulse
 
 releaseNotes: >-
-  Primeira versão do NetPulse nesta app store.
+  Timezone America/Sao_Paulo por padrão e correção de permissões.
 
 dependencies: []
 path: ""
