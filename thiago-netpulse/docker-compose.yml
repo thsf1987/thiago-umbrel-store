@@ -1,14 +1,38 @@
 version: "3.7"
 
 services:
-
   app_proxy:
     environment:
-      # The format here is: <app-id>_<docker-service-name>_1
-      APP_HOST: sparkles-hello-world_server_1
-      APP_PORT: 3000
-    
-  server:
-    image: getumbrel/community-app-store-hello-world:latest
+      APP_HOST: thiago-netpulse_netpulse_1
+      APP_PORT: 8080
+
+  netpulse:
+    image: ghcr.io/mrhdolek/netpulse:latest
+    container_name: thiago-netpulse-server
     user: "1000:1000"
     init: true
+    environment:
+      APP_ENV: prod
+      APP_SECRET: "COLE-AQUI-UM-SECRET"
+      DATABASE_URL: sqlite:////var/www/var/netpulse.sqlite
+    volumes:
+      - netpulse_data:/var/www/var
+    restart: unless-stopped
+
+  agent:
+    image: ghcr.io/mrhdolek/netpulse:latest
+    depends_on:
+      - netpulse
+    entrypoint: ["php", "bin/console", "app:agent:run"]
+    environment:
+      APP_ENV: 141899103d2f842f98ff5f8e6af25b3f
+      APP_SECRET: 141899103d2f842f98ff5f8e6af25b3f
+      NETPULSE_API_URL: http://netpulse:8080
+      PROBE_ID: "PREENCHER-DEPOIS"
+      PROBE_TOKEN: "PREENCHER-DEPOIS"
+      OOKLA_BINARY: speedtest
+      AGENT_POLL_INTERVAL: 60
+    restart: unless-stopped
+
+volumes:
+  netpulse_data:
