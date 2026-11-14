@@ -2,7 +2,7 @@ manifestVersion: 1
 id: thiago-netpulse
 name: NetPulse
 tagline: Acompanhe a velocidade real da sua internet ao longo do tempo
-icon: icon: https://github.com/thsf1987/thiago-umbrel-store/raw/master/thiago-netpulse/logo.png
+icon: https://github.com/thsf1987/thiago-umbrel-store/raw/master/thiago-netpulse/logo.png
 category: Networking
 version: "1.0.0"
 port: 4119
@@ -19,9 +19,6 @@ support: https://github.com/MrHDOLEK/NetPulse/issues
 submitter: Thiago
 submission: https://github.com/MrHDOLEK/NetPulse
 
-gallery:
-  - https://URL-DE-UM-SCREENSHOT-DASHBOARD
-  - https://URL-DE-OUTRO-SCREENSHOT
 
 releaseNotes: >-
   Primeira versão do NetPulse nesta app store.
