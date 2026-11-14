@@ -12,8 +12,9 @@ services:
     init: true
     environment:
       APP_ENV: prod
-      APP_SECRET: "141899103d2f842f98ff5f8e6af25b3f"
+      APP_SECRET: "TROQUE-PELO-RESULTADO-DE-openssl-rand-hex-16"
       DATABASE_URL: sqlite:////var/www/var/netpulse.sqlite
+      TZ: "America/Sao_Paulo"
     volumes:
       - netpulse_data:/var/www/var
     restart: unless-stopped
@@ -25,12 +26,13 @@ services:
     entrypoint: ["php", "bin/console", "app:agent:run"]
     environment:
       APP_ENV: prod
-      APP_SECRET: "141899103d2f842f98ff5f8e6af25b3f"
+      APP_SECRET: "MESMO-SECRET-DE-CIMA"
       NETPULSE_API_URL: http://netpulse:8080
-      PROBE_ID: "PREENCHER-DEPOIS"
-      PROBE_TOKEN: "PREENCHER-DEPOIS"
+      PROBE_ID: "PREENCHA-COM-O-ID-DO-PROBE"
+      PROBE_TOKEN: "PREENCHA-COM-O-TOKEN-DO-PROBE"
       OOKLA_BINARY: speedtest
       AGENT_POLL_INTERVAL: 60
+      TZ: "America/Sao_Paulo"
     restart: unless-stopped
 
 volumes:
