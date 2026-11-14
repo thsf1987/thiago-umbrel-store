@@ -1,29 +1,31 @@
 manifestVersion: 1
-id: sparkles-hello-world
-name: Hello World
-tagline: Replace this tagline with your app's tagline
-icon: https://svgur.com/i/mvA.svg
-category: Development
+id: thiago-netpulse
+name: NetPulse
+tagline: Acompanhe a velocidade real da sua internet ao longo do tempo
+icon: https://SEU-GITHUB/raw/thiago-umbrel-store/master/thiago-netpulse/logo.png
+category: Networking
 version: "1.0.0"
-port: 4000
+port: 4119
+
 description: >-
-  Add your app's description here.
+  Rastreador self-hosted de velocidade de internet. Agenda testes Ookla
+  em suas conexões, registra o histórico completo e mostra gráficos,
+  heatmap de horários lentos, alertas e métricas Prometheus.
 
+developer: MrHDOLEK
+website: https://github.com/MrHDOLEK/NetPulse
+repo: https://github.com/MrHDOLEK/NetPulse
+support: https://github.com/MrHDOLEK/NetPulse/issues
+submitter: Thiago
+submission: https://github.com/MrHDOLEK/NetPulse
 
-  You can also add newlines!
-
-developer: Umbrel
-website: https://umbrel.com
-submitter: Umbrel
-submission: https://github.com/getumbrel/umbrel-hello-world-app
-repo: https://github.com/getumbrel/umbrel-hello-world-app
-support: https://github.com/getumbrel/umbrel-hello-world-app/issues
 gallery:
-  - https://i.imgur.com/yyVG0Jb.jpeg
-  - https://i.imgur.com/yyVG0Jb.jpeg
-  - https://i.imgur.com/yyVG0Jb.jpeg
+  - https://URL-DE-UM-SCREENSHOT-DASHBOARD
+  - https://URL-DE-OUTRO-SCREENSHOT
+
 releaseNotes: >-
-  Add what's new in the latest version of your app here.
+  Primeira versão do NetPulse nesta app store.
+
 dependencies: []
 path: ""
 defaultUsername: ""
